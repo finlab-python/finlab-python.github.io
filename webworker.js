@@ -202,7 +202,7 @@ async function loadPyodideAndPackages() {
     await Promise.all([
       self.pyodide.loadPackage(['scipy']),
       self.pyodide.loadPackage(['pyarrow']),
-      self.pyodide.loadPackage(['/pyodide/finlab-2.2.0-cp313-cp313-pyemscripten_2025_0_wasm32.whl']),
+      self.pyodide.loadPackage(['/pyodide/finlab-2.2.1-cp313-cp313-pyemscripten_2025_0_wasm32.whl']),
       self.pyodide.loadPackage(['/pyodide/ta_lib-0.6.5-cp313-cp313-pyodide_2025_0_wasm32.whl']),
     ]);
     self.postMessage({ content: '安裝 finlab     (財經研究使用)', type: 'text', id: currentId, finish: false })
