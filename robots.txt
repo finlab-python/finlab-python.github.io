@@ -1,0 +1,109 @@
+# robots.txt for ai.finlab.tw — FinLab 台股 / 美股 / 多市場 Python 量化交易平台
+# 允許主流搜尋與 AI 搜尋抓取公開頁面；排除登入後私密頁面與工具型路徑。
+
+# ---- Mainstream search engines ----
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# ---- AI search / AI answer engines (這些 bot 用於把網站納入 AI 搜尋答案來源) ----
+# OpenAI ChatGPT Search
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI ChatGPT user-initiated browsing
+User-agent: ChatGPT-User
+Allow: /
+
+# OpenAI training crawler — 允許曝光於模型內知識
+User-agent: GPTBot
+Allow: /
+
+# Anthropic Claude (search / browsing / training crawlers)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI Overviews / Gemini grounding control
+User-agent: Google-Extended
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Common Crawl (大量 LLM 訓練語料來源)
+User-agent: CCBot
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+# Bytedance / Doubao / 字節跳動
+User-agent: Bytespider
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot, AhrefsBot, SemrushBot 等分析爬蟲（中性，允許以利第三方曝光分析）
+User-agent: Diffbot
+Allow: /
+
+# ---- Default ----
+User-agent: *
+Allow: /
+# 私密 / 工具型頁面：不需要進入索引，也避免 AI 引用到登入態 UI
+Disallow: /member_info
+Disallow: /api_token
+Disallow: /coupon
+Disallow: /use_coupon
+Disallow: /cancel_notification
+Disallow: /strategy_edit
+Disallow: /sdklogin
+Disallow: /course_edit
+Disallow: /course_playlist_edit
+Disallow: /social_image
+Disallow: /strategies?uid=
+Disallow: /*?uid=
+Disallow: /strategy/
+
+# Sitemap
+Sitemap: https://ai.finlab.tw/sitemap.xml
